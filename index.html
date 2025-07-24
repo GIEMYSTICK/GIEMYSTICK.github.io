@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Portfolio | วรเทพจักษ์ สุระขัน</title>
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <!-- AOS -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"/>
+  <!-- CSS -->
+  <link rel="stylesheet" href="style.css"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+</head>
+<body>
+  <!-- SIDEBAR -->
+  <nav class="sidebar">
+    <div class="logo">Port<span>folio</span></div>
+    <ul>
+      <li><a href="#about"      >ประวัติส่วนตัว</a></li>
+      <li><a href="#education"  >ประวัติการศึกษา</a></li>
+      <li><a href="#research"   >ผลงานวิจัย</a></li>
+      <li><a href="#experience" >ประสบการณ์ทำงาน</a></li>
+      <li><a href="#cert"       >เกียรติบัตร</a></li>
+      <li><a href="#contact"    >ติดต่อเรา</a></li>
+    </ul>
+    <div class="theme-switch">
+      <button id="theme-toggle" aria-label="Toggle theme">🌙</button>
+    </div>
+  </nav>
+
+  <!-- MAIN CONTENT -->
+  <main class="main-content">
+    <!-- HERO -->
+    <section id="hero">
+      <h1 id="hero-title">
+        <span class="line">Hello Word</span>
+        <span class="line accent">วรเทพจักษ์ สุระขัน</span>
+        <span class="line sub">COMPUTER ENGINEERING</span>
+      </h1>
+      <!-- รูปโปรไฟล์ WOW -->
+      <div class="hero-img-wrap" data-aos="zoom-in" data-aos-delay="600">
+        <img src="images/hero.jpg" alt="Profile" class="hero-img" onclick="openPosterModal(this.src)">
+        <div class="glow-ring"></div>
+      </div>
+    </section>
+
+    <!-- SECTION ประวัติส่วนตัว -->
+    <section id="about" class="section">
+      <div class="container">
+        <h2 data-aos="fade-right">ประวัติส่วนตัว</h2>
+        <p data-aos="fade-up" data-aos-delay="200">
+            ผู้มีความรับผิดชอบสูงและทำงานอย่างเป็นระบบ มีทักษะด้านไอทีและวิศวกรรม สามารถดูแลและซ่อมบำรุงอุปกรณ์ 
+            เช่น คอมพิวเตอร์,ปริ้นเตอร์,โน้ตบุ๊น,UPS รวมถึงระบบปฏิบัติการและเครือข่ายพื้นฐาน เชี่ยวชาญในการนำเทคโนโลยีมาปรับใช้เพื่อเพิ่มประสิทธิภาพงาน 
+            ทำงานเป็นทีมได้ดี ลำดับงานเป็น และพร้อมเติบโตไปกับองค์กรปัจจุบันอาศัยที่จังหวัดอุตรดิตถ์
+        </p>
+      </div>
+    </section>
+
+       <!-- SECTION Resume -->
+       <section id="research" class="section">
+        <div class="container">
+          <h2 data-aos="fade-right">Resume</h2>
+          <div class="cards" data-aos="fade-up" data-aos-delay="200">
+            <div class="card">
+              <div class="poster-title">Resume</div>
+              <img src="images/Resume1.png" alt="Resume" class="research-poster" onclick="openPosterModal(this.src)">
+            </div>
+            <!-- เพิ่ม card อื่นๆ ตามต้องการ -->
+          </div>
+
+    <!-- SECTION ประวัติการศึกษา -->
+    <section id="education" class="section">
+      <div class="container">
+        <h2 data-aos="fade-right">ประวัติการศึกษา</h2>
+        <ul data-aos="fade-up" data-aos-delay="200">
+          <li>ปริญญาตรี วิศวกรรมคอมพิวเตอร์ มหาวิทยาลัยราชภัฏอุตรดิตถ์ (2567)</li>
+          <li>ปวส. เทคนิคคอมพิวเตอร์ วิทยาลัยเทคนิคอุตดิตถ์ (2559)</li>
+          <li>ปวช. การบัญชี วิทยาลัยอาชีวศึกษาอุตรดิตถ์ (2557)</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- SECTION ผลงานวิจัย -->
+    <section id="research" class="section">
+      <div class="container">
+        <h2 data-aos="fade-right">ผลงานวิจัย</h2>
+        <div class="cards" data-aos="fade-up" data-aos-delay="200">
+          <div class="card">
+            <div class="poster-title">ระบบติดตามคุณภาพน้ำในบ่อบำบัดน้ำเสียมหาวิทยาลัยราชภัฏอุตรดิตถ์</div>
+            <img src="images/Poster.png" alt="ระบบติดตามคุณภาพน้ำในบ่อบำบัดน้ำเสียมหาวิทยาลัยราชภัฏอุตรดิตถ์" class="research-poster" onclick="openPosterModal(this.src)">
+          </div>
+          <!-- เพิ่ม card อื่นๆ ตามต้องการ -->
+        </div>
+
+        <!-- Modal สำหรับแสดงภาพขยาย -->
+        <div id="posterModal" class="poster-modal" onclick="closePosterModal()">
+          <span class="close">&times;</span>
+          <img class="poster-modal-content" id="posterModalImg">
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION ประสบการณ์ทำงาน -->
+    <section id="experience" class="section">
+      <div class="container">
+        <h2 data-aos="fade-right">ประสบการณ์ทำงาน</h2>
+        <ul data-aos="fade-up" data-aos-delay="200">
+          <li>นักวิชาการพลังงาน มหาวิทยาลัยราชภัฏอุตรดิตถ์ (2025 - ปัจบัน)</li>
+          <li>ผู้ช่วยเจ้าหน้าที่ฝ่ายสารสนเทศ บริษัท ศักดิ์สยามลิสซิ่ง จำกัด (มหาชน) สำนักงานใหญ่ ปฏิบัติงานสหกิตศึกษา(2024 - 2025)</li>
+          <li>ธุรการฝ่ายกำลังพล ม.2 กรมทหารม้าที่ 2 ทหารกองกระจำการ(2019 - 2021)</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- SECTION เกียรติบัตร -->
+    <section id="cert" class="section">
+      <div class="container">
+        <h2 data-aos="fade-right">เกียรติบัตร</h2>
+        <div class="gallery" data-aos="fade-up" data-aos-delay="200">
+          <img src="images/certificate1.png" alt="cert1" onclick="openPosterModal(this.src)"/>
+          <img src="images/certificate2.png" alt="cert2" onclick="openPosterModal(this.src)"/>
+          <img src="images/certificate3.png" alt="cert2" onclick="openPosterModal(this.src)"/>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION ติดต่อเรา -->
+    <section id="contact" class="section">
+      <div class="container">
+        <h2 data-aos="fade-right">ติดต่อเรา</h2>
+        <p data-aos="fade-up" data-aos-delay="200">
+          <a href="mailto:kie_zii@hotmail.co.th" class="cta-btn">📧 kie_zii@hotmail.co.th</a>
+          <a href="https://line.me/ti/p/kie_zii" class="cta-btn line-btn" target="_blank" rel="noopener">💬 แชท LINE : kie_zii</a>
+          <a href="https://www.facebook.com/GieMystick/" class="cta-btn fb-btn" target="_blank" rel="noopener"> <span class="fb-icon">&#xf09a;</span> FACEBOOK : Gie's Surakhan</a>
+          <a href="" class="cta-btn">📞 090-326-641</a>
+
+        </p>
+        <div class="social" data-aos="fade-up" data-aos-delay="400">
+          <a href="https://github.com/GIEMYSTICK" target="_blank">GitHub</a>
+          
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Scripts -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
