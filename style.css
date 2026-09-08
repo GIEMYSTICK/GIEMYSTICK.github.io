@@ -435,6 +435,9 @@ h2::after {
 .resume-side-block span,
 .resume-side-block a { display: block; margin: .38rem 0; color: #f5f6fb !important; font-size: .72rem; line-height: 1.45; text-decoration: none; overflow-wrap: anywhere; }
 .resume-side-block a:hover { color: #e2ad4a !important; }
+.resume-portfolio-link { display: flex !important; align-items: center; gap: .55rem; }
+.resume-portfolio-link img { flex: 0 0 auto; width: 56px; height: 56px; padding: 3px; background: #fff; border-radius: 5px; object-fit: contain; }
+.resume-portfolio-link span { min-width: 0; margin: 0 !important; color: #fff !important; font-size: .65rem !important; line-height: 1.25 !important; }
 .resume-side-block strong { display: block; margin-top: .8rem; color: #fff; font-size: .68rem; line-height: 1.35; }
 .resume-side-block strong:first-of-type { margin-top: 0; }
 .resume-side-block em { display: block; margin-top: .15rem; color: #c4cae0; font-size: .68rem; line-height: 1.35; }
@@ -721,6 +724,9 @@ h2::after {
   .resume-side-block a { margin: 1.2mm 0; font-size: 7pt; line-height: 1.28; }
   .resume-side-block p,
   .resume-side-block span { margin: 1.2mm 0; font-size: 7pt; line-height: 1.28; }
+  .resume-portfolio-link { gap: 2mm; }
+  .resume-portfolio-link img { width: 17mm; height: 17mm; padding: .8mm; }
+  .resume-portfolio-link span { font-size: 6.3pt !important; white-space: nowrap; }
   .resume-side-block strong { margin-top: 2.5mm; font-size: 6.8pt; line-height: 1.22; }
   .resume-side-block em { margin-top: .6mm; font-size: 6.7pt; line-height: 1.22; }
   .resume-side-block small { font-size: 6.4pt; }
