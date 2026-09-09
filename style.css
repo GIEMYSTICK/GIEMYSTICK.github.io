@@ -64,6 +64,8 @@ body::before {
   text-decoration: none;
   transform: translateY(-180%);
   transition: transform var(--transition);
+  font-family: inherit;
+  cursor: pointer;
 }
 .skip-link:focus,
 .skip-link:focus-visible { transform: translateY(0); }

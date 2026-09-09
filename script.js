@@ -1,4 +1,10 @@
 // ---------- Language Toggle ----------
+// Remove legacy section fragments from bookmarked or shared URLs while keeping
+// the current page, query parameters, and browser history entry intact.
+if (window.location.hash) {
+  window.history.replaceState(null, document.title, window.location.pathname + window.location.search);
+}
+
 const translations = {
   th: {
     pageTitle: 'Portfolio | วรเทพจักษ์ สุระขัน',
@@ -507,6 +513,7 @@ const pageTitles = {
 const languageToggle = document.getElementById('language-toggle');
 const menuToggle = document.getElementById('menu-toggle');
 const siteHeader = document.querySelector('.site-header');
+const skipLinks = document.querySelectorAll('[data-skip-link]');
 const logoLink = document.querySelector('.logo');
 const navLinks = document.querySelectorAll('#site-nav a');
 const navGroups = document.querySelectorAll('.nav-group');
@@ -598,6 +605,17 @@ function applyLanguage(language) {
 }
 
 applyLanguage(currentLanguage);
+
+// Keep the accessibility shortcut useful without adding a fragment to the URL.
+skipLinks.forEach((skipLink) => {
+  skipLink.addEventListener('click', () => {
+    const mainContent = document.getElementById('main-content');
+    if (!mainContent) return;
+    mainContent.setAttribute('tabindex', '-1');
+    mainContent.focus({ preventScroll: true });
+    mainContent.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  });
+});
 
 languageToggle.addEventListener('click', () => {
   applyLanguage(currentLanguage === 'th' ? 'en' : 'th');
