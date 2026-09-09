@@ -465,11 +465,15 @@ function applyLanguage(language) {
   languageToggle.textContent = language === 'th' ? 'EN' : 'TH';
   languageToggle.setAttribute('aria-label', language === 'th' ? 'Switch to English' : 'เปลี่ยนเป็นภาษาไทย');
   languageToggle.title = language === 'th' ? 'Switch to English' : 'เปลี่ยนเป็นภาษาไทย';
-  resumeDownload.href = language === 'th' ? 'output/pdf/resume-th.pdf' : 'output/pdf/resume-en.pdf';
-  resumeDownload.download = language === 'th' ? 'resume-th.pdf' : 'resume-en.pdf';
-  resumeDownload.setAttribute('aria-label', dictionary.resumeDownload);
-  backToTop.setAttribute('aria-label', dictionary.backToTopAria);
-  backToTop.title = dictionary.backToTopAria;
+  if (resumeDownload) {
+    resumeDownload.href = language === 'th' ? 'output/pdf/resume-th.pdf' : 'output/pdf/resume-en.pdf';
+    resumeDownload.download = language === 'th' ? 'resume-th.pdf' : 'resume-en.pdf';
+    resumeDownload.setAttribute('aria-label', dictionary.resumeDownload);
+  }
+  if (backToTop) {
+    backToTop.setAttribute('aria-label', dictionary.backToTopAria);
+    backToTop.title = dictionary.backToTopAria;
+  }
   updateMenuLabel();
   localStorage.setItem('language', language);
 }
@@ -480,7 +484,7 @@ languageToggle.addEventListener('click', () => {
   applyLanguage(currentLanguage === 'th' ? 'en' : 'th');
 });
 
-resumePrint.addEventListener('click', () => window.print());
+if (resumePrint) resumePrint.addEventListener('click', () => window.print());
 
 menuToggle.addEventListener('click', () => {
   const isOpen = siteHeader.classList.toggle('menu-open');
@@ -503,7 +507,7 @@ navGroupToggles.forEach((toggle) => {
 });
 
 navLinks.forEach((link) => link.addEventListener('click', closeMobileMenu));
-logoLink.addEventListener('click', closeMobileMenu);
+if (logoLink) logoLink.addEventListener('click', closeMobileMenu);
 window.addEventListener('resize', () => {
   if (window.innerWidth > 980) {
     siteHeader.classList.remove('menu-open');
@@ -513,10 +517,10 @@ window.addEventListener('resize', () => {
 });
 
 function updateBackToTop() {
-  backToTop.classList.toggle('is-visible', window.scrollY > 500);
+  if (backToTop) backToTop.classList.toggle('is-visible', window.scrollY > 500);
 }
 
-backToTop.addEventListener('click', () => {
+if (backToTop) backToTop.addEventListener('click', () => {
   window.scrollTo({ top: 0, behavior: 'smooth' });
 });
 
@@ -527,9 +531,9 @@ updateBackToTop();
 const toggleBtn = document.getElementById('theme-toggle');
 const saved = localStorage.getItem('theme') || 'light';
 document.documentElement.setAttribute('data-theme', saved);
-toggleBtn.textContent = saved === 'dark' ? '☀️' : '🌙';
+if (toggleBtn) toggleBtn.textContent = saved === 'dark' ? '☀️' : '🌙';
 
-toggleBtn.addEventListener('click', () => {
+if (toggleBtn) toggleBtn.addEventListener('click', () => {
   const current = document.documentElement.getAttribute('data-theme');
   const next = current === 'dark' ? 'light' : 'dark';
   document.documentElement.setAttribute('data-theme', next);
@@ -538,63 +542,74 @@ toggleBtn.addEventListener('click', () => {
 });
 
 // ---------- AOS ----------
-AOS.init({ once: true, duration: 700 });
+if (window.AOS) AOS.init({ once: true, duration: 700 });
 
 // ---------- GSAP Hero Text ----------
-gsap.from('#hero-title .line', {
-  y: 35,
-  opacity: 0,
-  duration: 0.9,
-  ease: 'power3.out',
-  stagger: 0.2
-});
+if (window.gsap) {
+  gsap.from('#hero-title .line', {
+    y: 35,
+    opacity: 0,
+    duration: 0.9,
+    ease: 'power3.out',
+    stagger: 0.2
+  });
 
-gsap.from(['.eyebrow', '.hero-role', '.hero-description', '.hero-actions', '.hero-meta'], {
-  y: 18,
-  opacity: 0,
-  duration: 0.7,
-  ease: 'power2.out',
-  stagger: 0.1,
-  delay: 0.35
-});
+  gsap.from(['.eyebrow', '.hero-role', '.hero-description', '.hero-actions', '.hero-meta'], {
+    y: 18,
+    opacity: 0,
+    duration: 0.7,
+    ease: 'power2.out',
+    stagger: 0.1,
+    delay: 0.35
+  });
 
-// ---------- GSAP Parallax Profile ----------
-gsap.to('.hero-img-wrap', {
-  yPercent: -15,
-  ease: 'none',
-  scrollTrigger: {
-    trigger: '#hero',
-    start: 'top top',
-    end: 'bottom top',
-    scrub: 1
+  if (document.querySelector('#hero') && window.ScrollTrigger) {
+    gsap.to('.hero-img-wrap', {
+      yPercent: -15,
+      ease: 'none',
+      scrollTrigger: {
+        trigger: '#hero',
+        start: 'top top',
+        end: 'bottom top',
+        scrub: 1
+      }
+    });
   }
-});
+}
 
 // ---------- Active Nav Link ----------
 const sections = document.querySelectorAll('section[id]');
 const links = document.querySelectorAll('#site-nav a');
+const currentPage = document.body.dataset.page || 'home';
 
-window.addEventListener('scroll', () => {
-  let current = '';
-  sections.forEach(sec => {
-    const offset = sec.offsetTop - 100;
-    if (scrollY >= offset) current = sec.getAttribute('id');
-  });
-  links.forEach(link => {
-    link.classList.remove('active');
-    if (link.getAttribute('href') === `#${current}`) link.classList.add('active');
+function updateActiveNav() {
+  let current = currentPage;
+  if (currentPage === 'home') {
+    sections.forEach((section) => {
+      if (window.scrollY >= section.offsetTop - 100) current = section.getAttribute('id');
+    });
+  }
+  links.forEach((link) => {
+    const href = link.getAttribute('href') || '';
+    const targetPage = href.split('#')[0].replace(/\.html$/, '') || 'home';
+    link.classList.toggle('active', targetPage === current);
   });
   navGroups.forEach((group) => {
     group.classList.toggle('has-active', Boolean(group.querySelector('a.active')));
   });
-});
+}
+
+window.addEventListener('scroll', updateActiveNav, { passive: true });
+updateActiveNav();
 
 function openPosterModal(src) {
   const modal = document.getElementById('posterModal');
   const modalImg = document.getElementById('posterModalImg');
+  if (!modal || !modalImg) return;
   modalImg.src = src;
   modal.classList.add('open');
 }
 function closePosterModal() {
-  document.getElementById('posterModal').classList.remove('open');
+  const modal = document.getElementById('posterModal');
+  if (modal) modal.classList.remove('open');
 }
