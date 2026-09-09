@@ -7,31 +7,31 @@
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://giemystick.github.io/about/</loc>
+    <loc>https://giemystick.github.io/about-me/</loc>
     <lastmod>2026-09-09</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://giemystick.github.io/research/</loc>
+    <loc>https://giemystick.github.io/research-projects/</loc>
     <lastmod>2026-09-09</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://giemystick.github.io/websites/</loc>
+    <loc>https://giemystick.github.io/web-portfolio/</loc>
     <lastmod>2026-09-09</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://giemystick.github.io/air-conditioning/</loc>
+    <loc>https://giemystick.github.io/air-conditioning-services/</loc>
     <lastmod>2026-09-09</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://giemystick.github.io/computer-repair/</loc>
+    <loc>https://giemystick.github.io/computer-printer-repair/</loc>
     <lastmod>2026-09-09</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -43,7 +43,7 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://giemystick.github.io/experience/</loc>
+    <loc>https://giemystick.github.io/work-experience/</loc>
     <lastmod>2026-09-09</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>

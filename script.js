@@ -446,7 +446,15 @@ const pageTitles = {
     th: 'ประวัติส่วนตัว | วรเทพจักษ์ สุระขัน',
     en: 'About | Mr. Whorathepchak Surakhan'
   },
+  'about-me': {
+    th: 'ประวัติส่วนตัว | วรเทพจักษ์ สุระขัน',
+    en: 'About | Mr. Whorathepchak Surakhan'
+  },
   research: {
+    th: 'ผลงานวิจัย | วรเทพจักษ์ สุระขัน',
+    en: 'Research | Mr. Whorathepchak Surakhan'
+  },
+  'research-projects': {
     th: 'ผลงานวิจัย | วรเทพจักษ์ สุระขัน',
     en: 'Research | Mr. Whorathepchak Surakhan'
   },
@@ -454,13 +462,25 @@ const pageTitles = {
     th: 'ผลงานเว็บไซต์ | วรเทพจักษ์ สุระขัน',
     en: 'Websites | Mr. Whorathepchak Surakhan'
   },
+  'web-portfolio': {
+    th: 'ผลงานเว็บไซต์ | วรเทพจักษ์ สุระขัน',
+    en: 'Web Portfolio | Mr. Whorathepchak Surakhan'
+  },
   'air-conditioning': {
     th: 'ผลงานติดตั้งแอร์ | วรเทพจักษ์ สุระขัน',
     en: 'Air Conditioning | Mr. Whorathepchak Surakhan'
   },
+  'air-conditioning-services': {
+    th: 'ผลงานติดตั้งแอร์ | วรเทพจักษ์ สุระขัน',
+    en: 'Air Conditioning Services | Mr. Whorathepchak Surakhan'
+  },
   'computer-repair': {
     th: 'ซ่อมคอมและ Printer | วรเทพจักษ์ สุระขัน',
     en: 'Computer Repair | Mr. Whorathepchak Surakhan'
+  },
+  'computer-printer-repair': {
+    th: 'ซ่อมคอมและ Printer | วรเทพจักษ์ สุระขัน',
+    en: 'Computer & Printer Repair | Mr. Whorathepchak Surakhan'
   },
   resume: {
     th: 'Resume | วรเทพจักษ์ สุระขัน',
@@ -469,6 +489,10 @@ const pageTitles = {
   experience: {
     th: 'ประสบการณ์ทำงาน | วรเทพจักษ์ สุระขัน',
     en: 'Experience | Mr. Whorathepchak Surakhan'
+  },
+  'work-experience': {
+    th: 'ประสบการณ์ทำงาน | วรเทพจักษ์ สุระขัน',
+    en: 'Work Experience | Mr. Whorathepchak Surakhan'
   },
   certificates: {
     th: 'เกียรติบัตร | วรเทพจักษ์ สุระขัน',
@@ -491,10 +515,14 @@ const resumeDownload = document.getElementById('resume-download');
 const resumePrint = document.getElementById('resume-print');
 const backToTop = document.getElementById('back-to-top');
 const currentPage = document.body.dataset.page || 'home';
-const pageTitleKey = window.location.pathname
-  .split('/')
-  .filter(Boolean)[0]
-  ?.replace(/\.html$/, '') || 'home';
+// Use the page's explicit data attribute first. This keeps titles reliable on
+// GitHub Pages directory URLs and avoids depending on the current base href.
+const pageTitleKey = pageTitles[currentPage]
+  ? currentPage
+  : window.location.pathname
+    .split('/')
+    .filter(Boolean)[0]
+    ?.replace(/\.html$/, '') || 'home';
 const urlLanguage = new URLSearchParams(window.location.search).get('lang');
 const savedLanguage = urlLanguage || localStorage.getItem('language');
 let currentLanguage = savedLanguage === 'en' ? 'en' : 'th';
