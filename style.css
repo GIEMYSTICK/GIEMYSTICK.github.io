@@ -557,6 +557,7 @@ h2::after {
 #contact > .container > p { display: flex; flex-wrap: wrap; gap: .7rem; }
 .cta-btn { display: inline-flex; align-items: center; margin: 0; padding: .75rem 1rem; color: var(--text); background: var(--surface); border: 1px solid var(--line); border-radius: 9px; text-decoration: none; font-size: .82rem; transition: transform var(--transition), border-color var(--transition), color var(--transition); }
 .cta-btn:hover { color: var(--primary-dark); border-color: var(--primary); transform: translateY(-3px); }
+.contact-icon { display: block; width: 1.05rem; height: 1.05rem; flex: 0 0 1.05rem; margin-right: .5rem; object-fit: contain; }
 .line-btn, .fb-btn { color: var(--text); background: var(--surface); }
 .fb-icon { color: #1877f2; margin-right: .5em; font-family: 'FontAwesome', Arial, sans-serif; font-weight: bold; }
 .contact-layout { display: grid; grid-template-columns: minmax(190px, .7fr) minmax(0, 1.3fr); gap: clamp(1.5rem, 4vw, 4rem); margin-top: 3rem; padding: clamp(1.25rem, 3vw, 2rem); background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); box-shadow: 0 14px 34px rgba(0,0,0,.05); }
