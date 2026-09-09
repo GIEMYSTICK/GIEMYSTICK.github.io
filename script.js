@@ -465,6 +465,10 @@ const resumeDownload = document.getElementById('resume-download');
 const resumePrint = document.getElementById('resume-print');
 const backToTop = document.getElementById('back-to-top');
 const currentPage = document.body.dataset.page || 'home';
+const pageTitleKey = window.location.pathname
+  .split('/')
+  .filter(Boolean)[0]
+  ?.replace(/\.html$/, '') || 'home';
 const urlLanguage = new URLSearchParams(window.location.search).get('lang');
 const savedLanguage = urlLanguage || localStorage.getItem('language');
 let currentLanguage = savedLanguage === 'en' ? 'en' : 'th';
@@ -495,7 +499,7 @@ function applyLanguage(language) {
   currentLanguage = language;
   const dictionary = translations[language];
   document.documentElement.lang = language;
-  document.title = pageTitles[currentPage]?.[language] || dictionary.pageTitle;
+  document.title = pageTitles[pageTitleKey]?.[language] || dictionary.pageTitle;
 
   document.querySelectorAll('[data-i18n]').forEach((element) => {
     element.innerHTML = dictionary[element.dataset.i18n];
