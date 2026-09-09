@@ -1,4 +1,0 @@
-User-agent: *
-Allow: /
-
-Sitemap: https://giemystick.github.io/sitemap.xml
