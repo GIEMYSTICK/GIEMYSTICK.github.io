@@ -1,4 +1,17 @@
 User-agent: *
 Allow: /
 
+# Explicitly allow answer-engine crawlers to read the public portfolio content.
+User-agent: GPTBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
 Sitemap: https://giemystick.github.io/sitemap.xml
