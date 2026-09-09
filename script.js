@@ -408,6 +408,52 @@ const translations = {
   }
 };
 
+// Keep each dedicated page distinguishable in the browser tab and search results.
+// The homepage retains the original portfolio title while section pages use their
+// own localized title after the language toggle is applied.
+const pageTitles = {
+  home: {
+    th: 'Portfolio | วรเทพจักษ์ สุระขัน',
+    en: 'Portfolio | Mr. Whorathepchak Surakhan'
+  },
+  about: {
+    th: 'ประวัติส่วนตัว | วรเทพจักษ์ สุระขัน',
+    en: 'About | Mr. Whorathepchak Surakhan'
+  },
+  research: {
+    th: 'ผลงานวิจัย | วรเทพจักษ์ สุระขัน',
+    en: 'Research | Mr. Whorathepchak Surakhan'
+  },
+  websites: {
+    th: 'ผลงานเว็บไซต์ | วรเทพจักษ์ สุระขัน',
+    en: 'Websites | Mr. Whorathepchak Surakhan'
+  },
+  'air-conditioning': {
+    th: 'ผลงานติดตั้งแอร์ | วรเทพจักษ์ สุระขัน',
+    en: 'Air Conditioning | Mr. Whorathepchak Surakhan'
+  },
+  'computer-repair': {
+    th: 'ซ่อมคอมและ Printer | วรเทพจักษ์ สุระขัน',
+    en: 'Computer Repair | Mr. Whorathepchak Surakhan'
+  },
+  resume: {
+    th: 'Resume | วรเทพจักษ์ สุระขัน',
+    en: 'Resume | Mr. Whorathepchak Surakhan'
+  },
+  experience: {
+    th: 'ประสบการณ์ทำงาน | วรเทพจักษ์ สุระขัน',
+    en: 'Experience | Mr. Whorathepchak Surakhan'
+  },
+  certificates: {
+    th: 'เกียรติบัตร | วรเทพจักษ์ สุระขัน',
+    en: 'Certificates | Mr. Whorathepchak Surakhan'
+  },
+  contact: {
+    th: 'ติดต่อเรา | วรเทพจักษ์ สุระขัน',
+    en: 'Contact | Mr. Whorathepchak Surakhan'
+  }
+};
+
 const languageToggle = document.getElementById('language-toggle');
 const menuToggle = document.getElementById('menu-toggle');
 const siteHeader = document.querySelector('.site-header');
@@ -418,6 +464,7 @@ const navGroupToggles = document.querySelectorAll('.nav-group-toggle');
 const resumeDownload = document.getElementById('resume-download');
 const resumePrint = document.getElementById('resume-print');
 const backToTop = document.getElementById('back-to-top');
+const currentPage = document.body.dataset.page || 'home';
 const urlLanguage = new URLSearchParams(window.location.search).get('lang');
 const savedLanguage = urlLanguage || localStorage.getItem('language');
 let currentLanguage = savedLanguage === 'en' ? 'en' : 'th';
@@ -448,7 +495,7 @@ function applyLanguage(language) {
   currentLanguage = language;
   const dictionary = translations[language];
   document.documentElement.lang = language;
-  document.title = dictionary.pageTitle;
+  document.title = pageTitles[currentPage]?.[language] || dictionary.pageTitle;
 
   document.querySelectorAll('[data-i18n]').forEach((element) => {
     element.innerHTML = dictionary[element.dataset.i18n];
@@ -580,7 +627,6 @@ if (window.gsap) {
 // ---------- Active Nav Link ----------
 const sections = document.querySelectorAll('section[id]');
 const links = document.querySelectorAll('#site-nav a');
-const currentPage = document.body.dataset.page || 'home';
 
 function updateActiveNav() {
   let current = currentPage;
