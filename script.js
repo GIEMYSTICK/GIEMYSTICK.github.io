@@ -16,7 +16,7 @@ const translations = {
     navExperience: 'ประสบการณ์ทำงาน',
     navCertificates: 'เกียรติบัตร',
     navContact: 'ติดต่อเรา',
-    heroEyebrow: 'PORTFOLIO · 2025',
+    heroEyebrow: 'PORTFOLIO',
     heroGreeting: 'สวัสดีครับ ผม',
     personName: 'วรเทพจักษ์ สุระขัน',
     heroRole: 'COMPUTER ENGINEERING',
@@ -212,7 +212,7 @@ const translations = {
     footerNavigationTitle: 'นำทาง',
     footerWorkTitle: 'ผลงาน',
     footerContactTitle: 'ติดต่อ',
-    footerCopyright: '© 2025 วรเทพจักษ์ สุระขัน. สงวนลิขสิทธิ์',
+    footerCopyright: 'วรเทพจักษ์ สุระขัน. สงวนลิขสิทธิ์',
     footerBackToTop: 'กลับขึ้นด้านบน ↑',
     backToTopAria: 'กลับขึ้นด้านบน'
   },
@@ -232,7 +232,7 @@ const translations = {
     navExperience: 'Experience',
     navCertificates: 'Certificates',
     navContact: 'Contact',
-    heroEyebrow: 'PORTFOLIO · 2025',
+    heroEyebrow: 'PORTFOLIO',
     heroGreeting: "Hello, I'm",
     personName: 'Mr. Whorathepchak Surakhan',
     heroRole: 'COMPUTER ENGINEERING',
@@ -428,7 +428,7 @@ const translations = {
     footerNavigationTitle: 'Navigation',
     footerWorkTitle: 'Selected Work',
     footerContactTitle: 'Contact',
-    footerCopyright: '© 2025 Mr. Whorathepchak Surakhan. All rights reserved.',
+    footerCopyright: 'Mr. Whorathepchak Surakhan. All rights reserved.',
     footerBackToTop: 'Back to top ↑',
     backToTopAria: 'Back to top'
   }
@@ -521,6 +521,19 @@ function closeMobileMenu() {
   }
 }
 
+function updateFooterCopyright(dictionary) {
+  const currentYear = new Date().getFullYear();
+
+  document.querySelectorAll('[data-i18n="footerCopyright"]').forEach((element) => {
+    const startYear = Number(element.dataset.yearStart) || 2025;
+    const yearLabel = startYear < currentYear
+      ? `${startYear}–${currentYear}`
+      : `${startYear}`;
+
+    element.textContent = `© ${yearLabel} ${dictionary.footerCopyright}`;
+  });
+}
+
 function applyLanguage(language) {
   currentLanguage = language;
   const dictionary = translations[language];
@@ -530,6 +543,7 @@ function applyLanguage(language) {
   document.querySelectorAll('[data-i18n]').forEach((element) => {
     element.innerHTML = dictionary[element.dataset.i18n];
   });
+  updateFooterCopyright(dictionary);
 
   document.querySelectorAll('[data-i18n-alt]').forEach((element) => {
     element.alt = dictionary[element.dataset.i18nAlt];
