@@ -142,8 +142,8 @@ section[id] { scroll-margin-top: 96px; }
   transition: color var(--transition), background var(--transition), transform var(--transition);
 }
 .nav-group-toggle { display: flex; align-items: center; gap: .45rem; }
-.nav-group-chevron { color: var(--primary); font-size: 1rem; line-height: .7; transition: transform var(--transition); }
-.nav-group.is-open > .nav-group-toggle .nav-group-chevron { transform: rotate(180deg); }
+.nav-group-chevron { display: inline-block; width: .48rem; height: .48rem; flex: 0 0 .48rem; margin: -.2rem 0 0 .1rem; color: var(--primary); border-right: 1.5px solid currentColor; border-bottom: 1.5px solid currentColor; font-size: 0; line-height: 1; transform: rotate(45deg); transition: color var(--transition), transform var(--transition); }
+.nav-group.is-open > .nav-group-toggle .nav-group-chevron { margin-top: .2rem; transform: rotate(225deg); }
 .site-header > ul > li > a:hover,
 .site-header > ul > li > a.active,
 .nav-group-toggle:hover,
