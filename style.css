@@ -725,7 +725,11 @@ h2::after {
   .website-browser:nth-child(odd),
   .website-browser:nth-child(even) { transform: none; }
   .website-browser:hover { transform: translateY(-4px); }
-  .browser-content iframe { height: 310px; }
+  /* Let touch gestures scroll the portfolio page instead of the embedded site. */
+  .browser-content { touch-action: pan-y; }
+  .browser-content iframe { height: 250px; pointer-events: none; }
+  .website-browser-caption { padding: .95rem 1rem 1.05rem; }
+  .website-browser-caption p { min-height: 0; margin-bottom: .55rem; }
   .air-gallery-item figcaption { padding: .65rem .75rem .75rem; font-size: .7rem; }
   .resume-sidebar { display: block; padding: 1.5rem 1.2rem; }
   .resume-actions { justify-content: stretch; margin-top: -1rem; }
