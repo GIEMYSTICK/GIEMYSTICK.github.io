@@ -591,7 +591,7 @@ function updateActiveNav() {
   }
   links.forEach((link) => {
     const href = link.getAttribute('href') || '';
-    const targetPage = href.split('#')[0].replace(/\.html$/, '') || 'home';
+    const targetPage = href.split('#')[0].replace(/\.html$/, '').replace(/^\.\//, '').replace(/\/$/, '') || 'home';
     link.classList.toggle('active', targetPage === current);
   });
   navGroups.forEach((group) => {
