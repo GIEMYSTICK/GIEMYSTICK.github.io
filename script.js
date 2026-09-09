@@ -659,3 +659,30 @@ function closePosterModal() {
   const modal = document.getElementById('posterModal');
   if (modal) modal.classList.remove('open');
 }
+
+// Bind poster controls in JavaScript instead of relying on inline handlers.
+// This keeps the modal reliable across dedicated pages and makes image cards
+// usable with keyboard navigation as well.
+const posterModal = document.getElementById('posterModal');
+if (posterModal) {
+  posterModal.removeAttribute('onclick');
+  posterModal.addEventListener('click', closePosterModal);
+}
+
+document.querySelectorAll('img[onclick^="openPosterModal"]').forEach((image) => {
+  image.removeAttribute('onclick');
+  image.setAttribute('role', 'button');
+  image.tabIndex = 0;
+  const showPoster = () => openPosterModal(image.currentSrc || image.src);
+  image.addEventListener('click', showPoster);
+  image.addEventListener('keydown', (event) => {
+    if (event.key === 'Enter' || event.key === ' ') {
+      event.preventDefault();
+      showPoster();
+    }
+  });
+});
+
+document.addEventListener('keydown', (event) => {
+  if (event.key === 'Escape') closePosterModal();
+});
