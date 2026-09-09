@@ -596,7 +596,7 @@ if (toggleBtn) toggleBtn.addEventListener('click', () => {
 if (window.AOS) AOS.init({ once: true, duration: 700 });
 
 // ---------- GSAP Hero Text ----------
-if (window.gsap) {
+if (window.gsap && document.querySelector('#hero')) {
   gsap.from('#hero-title .line', {
     y: 35,
     opacity: 0,
@@ -614,7 +614,7 @@ if (window.gsap) {
     delay: 0.35
   });
 
-  if (document.querySelector('#hero') && window.ScrollTrigger) {
+  if (window.ScrollTrigger) {
     gsap.to('.hero-img-wrap', {
       yPercent: -15,
       ease: 'none',
