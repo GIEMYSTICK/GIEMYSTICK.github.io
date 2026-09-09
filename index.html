@@ -110,7 +110,17 @@
     }
   ]
 }
-  </script></head>
+  </script><!-- Google Analytics 4 -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-4PWB82VNW5"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){window.dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-4PWB82VNW5', {
+    anonymize_ip: true,
+    cookie_flags: 'SameSite=None;Secure'
+  });
+</script></head>
 <body>
   <!-- SIDEBAR -->
   <nav class="site-header">
@@ -841,6 +851,6 @@
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
-  <script src="script.js?v=clean-urls-20260909-v2"></script>
+  <script src="script.js?v=ga4-20260909-v1"></script>
 </body>
 </html>

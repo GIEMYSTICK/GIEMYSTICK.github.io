@@ -620,6 +620,23 @@ function applyLanguage(language) {
 
 applyLanguage(currentLanguage);
 
+// Track useful portfolio outcomes without sending names, email addresses, or
+// message contents to Google Analytics.
+document.querySelectorAll('.contact-form').forEach((form) => {
+  form.addEventListener('submit', () => {
+    gtag('event', 'generate_lead', { method: 'contact_form' });
+  });
+});
+
+if (resumeDownload) {
+  resumeDownload.addEventListener('click', () => {
+    gtag('event', 'file_download', {
+      file_name: resumeDownload.download || 'resume.pdf',
+      file_extension: 'pdf'
+    });
+  });
+}
+
 // Keep the accessibility shortcut useful without adding a fragment to the URL.
 skipLinks.forEach((skipLink) => {
   skipLink.addEventListener('click', () => {
