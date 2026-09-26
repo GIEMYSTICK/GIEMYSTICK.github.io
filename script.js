@@ -461,15 +461,15 @@ const translations = {
 // own localized title after the language toggle is applied.
 const pageTitles = {
   home: {
-    th: 'Portfolio | วรเทพจักษ์ สุระขัน',
+    th: 'วรเทพจักษ์ สุระขัน | วิศวกรคอมพิวเตอร์และ IT Support',
     en: 'Portfolio | Mr. Whorathepchak Surakhan'
   },
   about: {
-    th: 'ประวัติส่วนตัว | วรเทพจักษ์ สุระขัน',
+    th: 'วรเทพจักษ์ สุระขัน | ประวัติส่วนตัวและประสบการณ์',
     en: 'About | Mr. Whorathepchak Surakhan'
   },
   'about-me': {
-    th: 'ประวัติส่วนตัว | วรเทพจักษ์ สุระขัน',
+    th: 'วรเทพจักษ์ สุระขัน | ประวัติส่วนตัวและประสบการณ์',
     en: 'About | Mr. Whorathepchak Surakhan'
   },
   research: {
