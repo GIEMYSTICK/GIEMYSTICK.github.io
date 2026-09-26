@@ -34,6 +34,8 @@ const translations = {
     scrollHint: 'เลื่อนเพื่อดูเพิ่มเติม',
     profileAlt: 'วรเทพจักษ์ สุระขัน',
     applicationPhotoAlt: 'รูปสมัครงานของวรเทพจักษ์ สุระขัน',
+    profilePageHeading: 'วรเทพจักษ์ สุระขัน',
+    profilePageIntro: 'วรเทพจักษ์ สุระขัน (Gie Mystick) เป็นวิศวกรคอมพิวเตอร์และผู้ปฏิบัติงาน IT Support สำเร็จปริญญาตรีวิศวกรรมคอมพิวเตอร์จากมหาวิทยาลัยราชภัฏอุตรดิตถ์ และพร้อมทำงานในพื้นที่สุโขทัย–อุตรดิตถ์',
     aboutTitle: 'ประวัติส่วนตัว',
     aboutDescription: 'ผมเป็นผู้เชี่ยวชาญด้านวิศวกรรมคอมพิวเตอร์และ IT Support ที่ทำงานอย่างเป็นระบบ มีประสบการณ์ดูแลและซ่อมบำรุงคอมพิวเตอร์ ปริ้นเตอร์ โน้ตบุ๊ก UPS ระบบปฏิบัติการ และเครือข่ายพื้นฐาน รวมถึงพัฒนาและดูแลเว็บไซต์แบบ Full-stack จุดแข็งคือการวิเคราะห์ปัญหาเป็นขั้นตอน สื่อสารกับผู้ใช้งานและทีมงานได้ดี รับผิดชอบงานตั้งแต่สำรวจความต้องการ ลงมือแก้ไข ทดสอบ จัดทำเอกสาร และติดตามผล พร้อมเรียนรู้เทคโนโลยีใหม่และนำมาปรับใช้ให้เกิดผลลัพธ์จริง ปัจจุบันพักอาศัยและพร้อมปฏิบัติงานในพื้นที่สุโขทัย–อุตรดิตถ์ และเปิดรับโอกาสร่วมงานที่ได้ใช้ทักษะด้านระบบ IT การสนับสนุนผู้ใช้งาน และการพัฒนาเว็บไซต์เพื่อช่วยให้องค์กรทำงานได้มีประสิทธิภาพยิ่งขึ้น',
     educationTitle: 'ประวัติการศึกษา',
@@ -197,9 +199,9 @@ const translations = {
     adminCompany: 'ม.2 กรมทหารม้าที่ 2 · ทหารกองประจำการ',
     adminPoint1: 'จัดทำเอกสารราชการ เช่น หนังสือขอความอนุเคราะห์ข้อมูล และดำเนินงานตามระเบียบงานประจำวัน',
     certificatesTitle: 'เกียรติบัตร',
-    certificateAlt1: 'เกียรติบัตรใบที่ 1',
-    certificateAlt2: 'เกียรติบัตรใบที่ 2',
-    certificateAlt3: 'เกียรติบัตรใบที่ 3',
+    certificateAlt1: 'เกียรติบัตรกรมพัฒนาฝีมือแรงงาน หลักสูตร 9 พฤติกรรม 9 สู่ความสำเร็จ ของวรเทพจักษ์ สุระขัน (2567)',
+    certificateAlt2: 'เกียรติบัตรมหาวิทยาลัยราชภัฏอุตรดิตถ์ โครงการเสริมสร้างความรู้และกระบวนการปฏิบัติงานสหกิจศึกษา ของวรเทพจักษ์ สุระขัน (2567)',
+    certificateAlt3: 'เกียรติบัตรมหาวิทยาลัยราชภัฏอุตรดิตถ์ การผ่านปฏิบัติงานสหกิจศึกษา 4 เดือน ของวรเทพจักษ์ สุระขัน (2568)',
     faqTitle: 'คำถามที่พบบ่อย',
     faqQuestion1: 'วรเทพจักษ์ สุระขันเชี่ยวชาญด้านใด?',
     faqAnswer1: 'เชี่ยวชาญด้าน IT Support วิศวกรรมคอมพิวเตอร์ การดูแลระบบ เว็บไซต์ Full-stack และการซ่อมบำรุงอุปกรณ์ไอที',
@@ -258,6 +260,8 @@ const translations = {
     scrollHint: 'Scroll to explore',
     profileAlt: 'Mr. Whorathepchak Surakhan',
     applicationPhotoAlt: 'Application photo of Mr. Whorathepchak Surakhan',
+    profilePageHeading: 'About Whorathepchak Surakhan',
+    profilePageIntro: 'Whorathepchak Surakhan (Gie Mystick) is a computer engineer and IT support professional. He earned a bachelor’s degree in Computer Engineering from Uttaradit Rajabhat University and is available for work in Sukhothai and Uttaradit, Thailand.',
     aboutTitle: 'About Me',
     aboutDescription: 'I am a Computer Engineering and IT Support professional who works systematically across technical support, hardware maintenance, operating systems, basic networks, and full-stack website development. I approach each assignment from requirements discovery through troubleshooting, testing, documentation, and follow-up, while communicating clearly with users and teams. I enjoy learning new technologies and applying them to create practical improvements for an organization. Currently living and available to work across Sukhothai and Uttaradit, I am open to opportunities where I can contribute through IT systems, user support, and web development.',
     educationTitle: 'Education',
@@ -421,9 +425,9 @@ const translations = {
     adminCompany: '2nd Cavalry Battalion · Military service',
     adminPoint1: 'Prepared official documents, including data request letters, and carried out routine administrative procedures.',
     certificatesTitle: 'Certificates',
-    certificateAlt1: 'Certificate 1',
-    certificateAlt2: 'Certificate 2',
-    certificateAlt3: 'Certificate 3',
+    certificateAlt1: 'Department of Skill Development certificate for the 9 Behaviors for Success course, awarded to Whorathepchak Surakhan (2024)',
+    certificateAlt2: 'Uttaradit Rajabhat University certificate for participation in the cooperative education preparation project, awarded to Whorathepchak Surakhan (2024)',
+    certificateAlt3: 'Uttaradit Rajabhat University certificate for completing four months of cooperative education, awarded to Whorathepchak Surakhan (2025)',
     faqTitle: 'Frequently Asked Questions',
     faqQuestion1: 'What does Mr. Whorathepchak Surakhan specialize in?',
     faqAnswer1: 'He specializes in IT support, computer engineering, system administration, full-stack websites, and IT equipment maintenance.',
@@ -771,11 +775,14 @@ function updateActiveNav() {
 window.addEventListener('scroll', updateActiveNav, { passive: true });
 updateActiveNav();
 
-function openPosterModal(src) {
+function openPosterModal(src, alt = '') {
   const modal = document.getElementById('posterModal');
   const modalImg = document.getElementById('posterModalImg');
   if (!modal || !modalImg) return;
   modalImg.src = src;
+  modalImg.alt = alt;
+  if (alt) modalImg.removeAttribute('aria-hidden');
+  else modalImg.setAttribute('aria-hidden', 'true');
   modal.classList.add('open');
 }
 function closePosterModal() {
@@ -796,7 +803,7 @@ document.querySelectorAll('img[onclick^="openPosterModal"]').forEach((image) => 
   image.removeAttribute('onclick');
   image.setAttribute('role', 'button');
   image.tabIndex = 0;
-  const showPoster = () => openPosterModal(image.currentSrc || image.src);
+  const showPoster = () => openPosterModal(image.currentSrc || image.src, image.alt);
   image.addEventListener('click', showPoster);
   image.addEventListener('keydown', (event) => {
     if (event.key === 'Enter' || event.key === ' ') {

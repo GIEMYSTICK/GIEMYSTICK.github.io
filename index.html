@@ -43,6 +43,16 @@
       "image": "https://giemystick.github.io/images/รูปสมัครงาน.png",
       "jobTitle": "Computer Engineer and IT Support Specialist",
       "description": "วิศวกรคอมพิวเตอร์และผู้เชี่ยวชาญ IT Support มีผลงานด้านการดูแลระบบและพัฒนาเว็บไซต์",
+      "alumniOf": {
+        "@type": "CollegeOrUniversity",
+        "name": "มหาวิทยาลัยราชภัฏอุตรดิตถ์"
+      },
+      "knowsAbout": [
+        "IT Support",
+        "Computer Engineering",
+        "Full-stack Web Development",
+        "System Administration"
+      ],
       "email": "mailto:kie_zii@hotmail.co.th",
       "sameAs": [
         "https://github.com/GIEMYSTICK",
@@ -203,11 +213,11 @@
           <div class="hero-img-wrap">
             <picture>
               <source media="(max-width: 700px)" srcset="images/รูปสมัครงาน.png">
-              <img src="images/hero.jpg" alt="วรเทพจักษ์ สุระขัน" data-i18n-alt="profileAlt" class="hero-img" onclick="openPosterModal(this.src)">
+              <img src="images/hero.jpg" alt="วรเทพจักษ์ สุระขัน" data-i18n-alt="profileAlt" class="hero-img" onclick="openPosterModal(this.src)" loading="eager" fetchpriority="high" decoding="async">
             </picture>
           </div>
           <div class="hero-profile-card" data-aos="fade-left" data-aos-delay="350">
-            <img src="images/รูปสมัครงาน.png" alt="รูปสมัครงานของวรเทพจักษ์ สุระขัน" data-i18n-alt="applicationPhotoAlt" onclick="openPosterModal(this.src)">
+            <img src="images/รูปสมัครงาน.png" alt="รูปสมัครงานของวรเทพจักษ์ สุระขัน" data-i18n-alt="applicationPhotoAlt" onclick="openPosterModal(this.src)" loading="lazy" decoding="async">
           </div>
           <div class="hero-tag">ENGINEER<br><span>&amp; IT SUPPORT</span></div>
           <div class="hero-index">CPE <span>XIV</span></div>
@@ -247,7 +257,7 @@
         <div class="resume-document" data-aos="fade-up" data-aos-delay="200">
           <aside class="resume-sidebar">
             <div class="resume-identity">
-              <img src="images/รูปสมัครงาน.png" alt="วรเทพจักษ์ สุระขัน" data-i18n-alt="resumeProfileAlt">
+              <img src="images/รูปสมัครงาน.png" alt="วรเทพจักษ์ สุระขัน" data-i18n-alt="resumeProfileAlt" loading="lazy" decoding="async">
               <h3 data-i18n="resumeName">วรเทพจักษ์ สุระขัน</h3>
               <p data-i18n="resumeRole">IT SUPPORT · COMPUTER ENGINEERING</p>
             </div>
@@ -263,7 +273,7 @@
             <div class="resume-side-block resume-portfolio-qr">
               <h4 data-i18n="resumePortfolioTitle">เว็บไซต์ Portfolio</h4>
               <a class="resume-portfolio-link" href="https://giemystick.github.io/" target="_blank" rel="noopener">
-                <img src="images/qrcode_giemystick.github.io.png" alt="QR Code เว็บไซต์ Portfolio" data-i18n-alt="resumePortfolioAlt">
+                <img src="images/qrcode_giemystick.github.io.png" alt="QR Code เว็บไซต์ Portfolio" data-i18n-alt="resumePortfolioAlt" loading="lazy" decoding="async">
                 <span data-i18n="resumePortfolioUrl">giemystick.github.io</span>
               </a>
             </div>
@@ -421,7 +431,7 @@
           <article class="card research-card">
             <div class="research-card-media">
               <div class="poster-title" data-i18n="researchPosterTitle">ระบบติดตามคุณภาพน้ำในบ่อบำบัดน้ำเสียมหาวิทยาลัยราชภัฏอุตรดิตถ์</div>
-              <img src="images/Poster.png" alt="ระบบติดตามคุณภาพน้ำในบ่อบำบัดน้ำเสียมหาวิทยาลัยราชภัฏอุตรดิตถ์" data-i18n-alt="researchPosterAlt" class="research-poster" onclick="openPosterModal(this.src)">
+              <img src="images/Poster.png" alt="ระบบติดตามคุณภาพน้ำในบ่อบำบัดน้ำเสียมหาวิทยาลัยราชภัฏอุตรดิตถ์" data-i18n-alt="researchPosterAlt" class="research-poster" onclick="openPosterModal(this.src)" loading="lazy" decoding="async">
               <p class="research-poster-hint" data-i18n="researchPosterHint">คลิกโปสเตอร์เพื่อดูภาพขนาดใหญ่</p>
             </div>
             <div class="research-card-body">
@@ -448,7 +458,7 @@
         <!-- Modal สำหรับแสดงภาพขยาย -->
         <div id="posterModal" class="poster-modal" onclick="closePosterModal()">
           <span class="close">&times;</span>
-          <img class="poster-modal-content" id="posterModalImg">
+          <img class="poster-modal-content" id="posterModalImg" alt="" aria-hidden="true" loading="lazy" decoding="async">
         </div>
       </div>
     </section>
@@ -601,27 +611,27 @@
 
         <div class="air-gallery" data-aos="fade-up" data-aos-delay="350">
           <figure class="air-gallery-item">
-            <img src="images/ผลงานแอร์/LINE_ALBUM_งานแอร์_260908_1.jpg" alt="ผลงานติดตั้งแอร์ภาพที่ 1" data-i18n-alt="airPhotoAlt1" onclick="openPosterModal(this.src)">
+            <img src="images/ผลงานแอร์/LINE_ALBUM_งานแอร์_260908_1.jpg" alt="ผลงานติดตั้งแอร์ภาพที่ 1" data-i18n-alt="airPhotoAlt1" onclick="openPosterModal(this.src)" loading="lazy" decoding="async">
             <figcaption data-i18n="airPhotoCaption1">งานติดตั้งเครื่องปรับอากาศ</figcaption>
           </figure>
           <figure class="air-gallery-item">
-            <img src="images/ผลงานแอร์/LINE_ALBUM_งานแอร์_260908_2.jpg" alt="ผลงานติดตั้งแอร์ภาพที่ 2" data-i18n-alt="airPhotoAlt2" onclick="openPosterModal(this.src)">
+            <img src="images/ผลงานแอร์/LINE_ALBUM_งานแอร์_260908_2.jpg" alt="ผลงานติดตั้งแอร์ภาพที่ 2" data-i18n-alt="airPhotoAlt2" onclick="openPosterModal(this.src)" loading="lazy" decoding="async">
             <figcaption data-i18n="airPhotoCaption2">ตรวจสอบและจัดเตรียมหน้างาน</figcaption>
           </figure>
           <figure class="air-gallery-item">
-            <img src="images/ผลงานแอร์/LINE_ALBUM_งานแอร์_260908_3.jpg" alt="ผลงานติดตั้งแอร์ภาพที่ 3" data-i18n-alt="airPhotoAlt3" onclick="openPosterModal(this.src)">
+            <img src="images/ผลงานแอร์/LINE_ALBUM_งานแอร์_260908_3.jpg" alt="ผลงานติดตั้งแอร์ภาพที่ 3" data-i18n-alt="airPhotoAlt3" onclick="openPosterModal(this.src)" loading="lazy" decoding="async">
             <figcaption data-i18n="airPhotoCaption3">งานเดินระบบและติดตั้งอุปกรณ์</figcaption>
           </figure>
           <figure class="air-gallery-item">
-            <img src="images/ผลงานแอร์/LINE_ALBUM_งานแอร์_260908_4.jpg" alt="ผลงานติดตั้งแอร์ภาพที่ 4" data-i18n-alt="airPhotoAlt4" onclick="openPosterModal(this.src)">
+            <img src="images/ผลงานแอร์/LINE_ALBUM_งานแอร์_260908_4.jpg" alt="ผลงานติดตั้งแอร์ภาพที่ 4" data-i18n-alt="airPhotoAlt4" onclick="openPosterModal(this.src)" loading="lazy" decoding="async">
             <figcaption data-i18n="airPhotoCaption4">งานติดตั้งภายในอาคาร</figcaption>
           </figure>
           <figure class="air-gallery-item">
-            <img src="images/ผลงานแอร์/LINE_ALBUM_งานแอร์_260908_5.jpg" alt="ผลงานติดตั้งแอร์ภาพที่ 5" data-i18n-alt="airPhotoAlt5" onclick="openPosterModal(this.src)">
+            <img src="images/ผลงานแอร์/LINE_ALBUM_งานแอร์_260908_5.jpg" alt="ผลงานติดตั้งแอร์ภาพที่ 5" data-i18n-alt="airPhotoAlt5" onclick="openPosterModal(this.src)" loading="lazy" decoding="async">
             <figcaption data-i18n="airPhotoCaption5">งาน Service และบำรุงรักษา</figcaption>
           </figure>
           <figure class="air-gallery-item">
-            <img src="images/ผลงานแอร์/LINE_ALBUM_งานแอร์_260908_6.jpg" alt="ผลงานติดตั้งแอร์ภาพที่ 6" data-i18n-alt="airPhotoAlt6" onclick="openPosterModal(this.src)">
+            <img src="images/ผลงานแอร์/LINE_ALBUM_งานแอร์_260908_6.jpg" alt="ผลงานติดตั้งแอร์ภาพที่ 6" data-i18n-alt="airPhotoAlt6" onclick="openPosterModal(this.src)" loading="lazy" decoding="async">
             <figcaption data-i18n="airPhotoCaption6">ตรวจสอบระบบทำความเย็น</figcaption>
           </figure>
         </div>
@@ -653,25 +663,25 @@
         </div>
 
         <div class="computer-gallery" data-aos="fade-up" data-aos-delay="350">
-          <img src="images/comprinter/LINE_ALBUM_2122024_260908_1.jpg" alt="ผลงานซ่อมคอมพิวเตอร์และ Printer" data-i18n-alt="computerPhotoAlt" onclick="openPosterModal(this.src)">
-          <img src="images/comprinter/LINE_ALBUM_2122024_260908_2.jpg" alt="ผลงานซ่อมคอมพิวเตอร์และ Printer" data-i18n-alt="computerPhotoAlt" onclick="openPosterModal(this.src)">
-          <img src="images/comprinter/LINE_ALBUM_2122024_260908_3.jpg" alt="ผลงานซ่อมคอมพิวเตอร์และ Printer" data-i18n-alt="computerPhotoAlt" onclick="openPosterModal(this.src)">
-          <img src="images/comprinter/LINE_ALBUM_2122024_260908_4.jpg" alt="ผลงานซ่อมคอมพิวเตอร์และ Printer" data-i18n-alt="computerPhotoAlt" onclick="openPosterModal(this.src)">
-          <img src="images/comprinter/LINE_ALBUM_2122024_260908_5.jpg" alt="ผลงานซ่อมคอมพิวเตอร์และ Printer" data-i18n-alt="computerPhotoAlt" onclick="openPosterModal(this.src)">
-          <img src="images/comprinter/LINE_ALBUM_2122024_260908_6.jpg" alt="ผลงานซ่อมคอมพิวเตอร์และ Printer" data-i18n-alt="computerPhotoAlt" onclick="openPosterModal(this.src)">
-          <img src="images/comprinter/LINE_ALBUM_2122024_260908_7.jpg" alt="ผลงานซ่อมคอมพิวเตอร์และ Printer" data-i18n-alt="computerPhotoAlt" onclick="openPosterModal(this.src)">
-          <img src="images/comprinter/LINE_ALBUM_2122024_260908_8.jpg" alt="ผลงานซ่อมคอมพิวเตอร์และ Printer" data-i18n-alt="computerPhotoAlt" onclick="openPosterModal(this.src)">
-          <img src="images/comprinter/LINE_ALBUM_2122024_260908_9.jpg" alt="ผลงานซ่อมคอมพิวเตอร์และ Printer" data-i18n-alt="computerPhotoAlt" onclick="openPosterModal(this.src)">
-          <img src="images/comprinter/LINE_ALBUM_2122024_260908_10.jpg" alt="ผลงานซ่อมคอมพิวเตอร์และ Printer" data-i18n-alt="computerPhotoAlt" onclick="openPosterModal(this.src)">
-          <img src="images/comprinter/LINE_ALBUM_2122024_260908_11.jpg" alt="ผลงานซ่อมคอมพิวเตอร์และ Printer" data-i18n-alt="computerPhotoAlt" onclick="openPosterModal(this.src)">
-          <img src="images/comprinter/LINE_ALBUM_2122024_260908_12.jpg" alt="ผลงานซ่อมคอมพิวเตอร์และ Printer" data-i18n-alt="computerPhotoAlt" onclick="openPosterModal(this.src)">
-          <img src="images/comprinter/LINE_ALBUM_2122024_260908_13.jpg" alt="ผลงานซ่อมคอมพิวเตอร์และ Printer" data-i18n-alt="computerPhotoAlt" onclick="openPosterModal(this.src)">
-          <img src="images/comprinter/LINE_ALBUM_2122024_260908_14.jpg" alt="ผลงานซ่อมคอมพิวเตอร์และ Printer" data-i18n-alt="computerPhotoAlt" onclick="openPosterModal(this.src)">
-          <img src="images/comprinter/LINE_ALBUM_2122024_260908_15.jpg" alt="ผลงานซ่อมคอมพิวเตอร์และ Printer" data-i18n-alt="computerPhotoAlt" onclick="openPosterModal(this.src)">
-          <img src="images/comprinter/LINE_ALBUM_2122024_260908_16.jpg" alt="ผลงานซ่อมคอมพิวเตอร์และ Printer" data-i18n-alt="computerPhotoAlt" onclick="openPosterModal(this.src)">
-          <img src="images/comprinter/LINE_ALBUM_2122024_260908_17.jpg" alt="ผลงานซ่อมคอมพิวเตอร์และ Printer" data-i18n-alt="computerPhotoAlt" onclick="openPosterModal(this.src)">
-          <img src="images/comprinter/LINE_ALBUM_2122024_260908_18.jpg" alt="ผลงานซ่อมคอมพิวเตอร์และ Printer" data-i18n-alt="computerPhotoAlt" onclick="openPosterModal(this.src)">
-          <img src="images/comprinter/LINE_ALBUM_2122024_260908_19.jpg" alt="ผลงานซ่อมคอมพิวเตอร์และ Printer" data-i18n-alt="computerPhotoAlt" onclick="openPosterModal(this.src)">
+          <img src="images/comprinter/LINE_ALBUM_2122024_260908_1.jpg" alt="ผลงานซ่อมคอมพิวเตอร์และ Printer" data-i18n-alt="computerPhotoAlt" onclick="openPosterModal(this.src)" loading="lazy" decoding="async">
+          <img src="images/comprinter/LINE_ALBUM_2122024_260908_2.jpg" alt="ผลงานซ่อมคอมพิวเตอร์และ Printer" data-i18n-alt="computerPhotoAlt" onclick="openPosterModal(this.src)" loading="lazy" decoding="async">
+          <img src="images/comprinter/LINE_ALBUM_2122024_260908_3.jpg" alt="ผลงานซ่อมคอมพิวเตอร์และ Printer" data-i18n-alt="computerPhotoAlt" onclick="openPosterModal(this.src)" loading="lazy" decoding="async">
+          <img src="images/comprinter/LINE_ALBUM_2122024_260908_4.jpg" alt="ผลงานซ่อมคอมพิวเตอร์และ Printer" data-i18n-alt="computerPhotoAlt" onclick="openPosterModal(this.src)" loading="lazy" decoding="async">
+          <img src="images/comprinter/LINE_ALBUM_2122024_260908_5.jpg" alt="ผลงานซ่อมคอมพิวเตอร์และ Printer" data-i18n-alt="computerPhotoAlt" onclick="openPosterModal(this.src)" loading="lazy" decoding="async">
+          <img src="images/comprinter/LINE_ALBUM_2122024_260908_6.jpg" alt="ผลงานซ่อมคอมพิวเตอร์และ Printer" data-i18n-alt="computerPhotoAlt" onclick="openPosterModal(this.src)" loading="lazy" decoding="async">
+          <img src="images/comprinter/LINE_ALBUM_2122024_260908_7.jpg" alt="ผลงานซ่อมคอมพิวเตอร์และ Printer" data-i18n-alt="computerPhotoAlt" onclick="openPosterModal(this.src)" loading="lazy" decoding="async">
+          <img src="images/comprinter/LINE_ALBUM_2122024_260908_8.jpg" alt="ผลงานซ่อมคอมพิวเตอร์และ Printer" data-i18n-alt="computerPhotoAlt" onclick="openPosterModal(this.src)" loading="lazy" decoding="async">
+          <img src="images/comprinter/LINE_ALBUM_2122024_260908_9.jpg" alt="ผลงานซ่อมคอมพิวเตอร์และ Printer" data-i18n-alt="computerPhotoAlt" onclick="openPosterModal(this.src)" loading="lazy" decoding="async">
+          <img src="images/comprinter/LINE_ALBUM_2122024_260908_10.jpg" alt="ผลงานซ่อมคอมพิวเตอร์และ Printer" data-i18n-alt="computerPhotoAlt" onclick="openPosterModal(this.src)" loading="lazy" decoding="async">
+          <img src="images/comprinter/LINE_ALBUM_2122024_260908_11.jpg" alt="ผลงานซ่อมคอมพิวเตอร์และ Printer" data-i18n-alt="computerPhotoAlt" onclick="openPosterModal(this.src)" loading="lazy" decoding="async">
+          <img src="images/comprinter/LINE_ALBUM_2122024_260908_12.jpg" alt="ผลงานซ่อมคอมพิวเตอร์และ Printer" data-i18n-alt="computerPhotoAlt" onclick="openPosterModal(this.src)" loading="lazy" decoding="async">
+          <img src="images/comprinter/LINE_ALBUM_2122024_260908_13.jpg" alt="ผลงานซ่อมคอมพิวเตอร์และ Printer" data-i18n-alt="computerPhotoAlt" onclick="openPosterModal(this.src)" loading="lazy" decoding="async">
+          <img src="images/comprinter/LINE_ALBUM_2122024_260908_14.jpg" alt="ผลงานซ่อมคอมพิวเตอร์และ Printer" data-i18n-alt="computerPhotoAlt" onclick="openPosterModal(this.src)" loading="lazy" decoding="async">
+          <img src="images/comprinter/LINE_ALBUM_2122024_260908_15.jpg" alt="ผลงานซ่อมคอมพิวเตอร์และ Printer" data-i18n-alt="computerPhotoAlt" onclick="openPosterModal(this.src)" loading="lazy" decoding="async">
+          <img src="images/comprinter/LINE_ALBUM_2122024_260908_16.jpg" alt="ผลงานซ่อมคอมพิวเตอร์และ Printer" data-i18n-alt="computerPhotoAlt" onclick="openPosterModal(this.src)" loading="lazy" decoding="async">
+          <img src="images/comprinter/LINE_ALBUM_2122024_260908_17.jpg" alt="ผลงานซ่อมคอมพิวเตอร์และ Printer" data-i18n-alt="computerPhotoAlt" onclick="openPosterModal(this.src)" loading="lazy" decoding="async">
+          <img src="images/comprinter/LINE_ALBUM_2122024_260908_18.jpg" alt="ผลงานซ่อมคอมพิวเตอร์และ Printer" data-i18n-alt="computerPhotoAlt" onclick="openPosterModal(this.src)" loading="lazy" decoding="async">
+          <img src="images/comprinter/LINE_ALBUM_2122024_260908_19.jpg" alt="ผลงานซ่อมคอมพิวเตอร์และ Printer" data-i18n-alt="computerPhotoAlt" onclick="openPosterModal(this.src)" loading="lazy" decoding="async">
         </div>
       </div>
     </section>
@@ -753,9 +763,9 @@
       <div class="container">
         <h2 data-aos="fade-right" data-i18n="certificatesTitle">เกียรติบัตร</h2>
         <div class="gallery" data-aos="fade-up" data-aos-delay="200">
-          <img src="images/certificate1.png" alt="cert1" data-i18n-alt="certificateAlt1" onclick="openPosterModal(this.src)"/>
-          <img src="images/certificate2.png" alt="cert2" data-i18n-alt="certificateAlt2" onclick="openPosterModal(this.src)"/>
-          <img src="images/certificate3.png" alt="cert3" data-i18n-alt="certificateAlt3" onclick="openPosterModal(this.src)"/>
+          <img src="images/certificate1.png" alt="เกียรติบัตรกรมพัฒนาฝีมือแรงงาน หลักสูตร 9 พฤติกรรม 9 สู่ความสำเร็จ ของวรเทพจักษ์ สุระขัน (2567)" data-i18n-alt="certificateAlt1" onclick="openPosterModal(this.src)" loading="lazy" decoding="async">
+          <img src="images/certificate2.png" alt="เกียรติบัตรมหาวิทยาลัยราชภัฏอุตรดิตถ์ โครงการเสริมสร้างความรู้และกระบวนการปฏิบัติงานสหกิจศึกษา ของวรเทพจักษ์ สุระขัน (2567)" data-i18n-alt="certificateAlt2" onclick="openPosterModal(this.src)" loading="lazy" decoding="async">
+          <img src="images/certificate3.png" alt="เกียรติบัตรมหาวิทยาลัยราชภัฏอุตรดิตถ์ การผ่านปฏิบัติงานสหกิจศึกษา 4 เดือน ของวรเทพจักษ์ สุระขัน (2568)" data-i18n-alt="certificateAlt3" onclick="openPosterModal(this.src)" loading="lazy" decoding="async">
         </div>
       </div>
     </section>
@@ -786,10 +796,10 @@
       <div class="container">
         <h2 data-aos="fade-right" data-i18n="contactTitle">ติดต่อเรา</h2>
         <p data-aos="fade-up" data-aos-delay="200">
-          <a href="mailto:kie_zii@hotmail.co.th" class="cta-btn"><img class="contact-icon" src="https://cdn-icons-png.flaticon.com/512/9068/9068642.png" alt="" aria-hidden="true"> kie_zii@hotmail.co.th</a>
-          <a href="https://line.me/ti/p/kie_zii" class="cta-btn line-btn" target="_blank" rel="noopener"><img class="contact-icon" src="https://cdn-icons-png.flaticon.com/512/3670/3670089.png" alt="" aria-hidden="true"> <span data-i18n="lineLabel">แชท LINE</span> : kie_zii</a>
-          <a href="https://www.facebook.com/GieMystick/" class="cta-btn fb-btn" target="_blank" rel="noopener"><img class="contact-icon" src="https://cdn-icons-png.flaticon.com/512/5968/5968764.png" alt="" aria-hidden="true"> FACEBOOK : Gie's Surakhan</a>
-          <a href="tel:090326641" class="cta-btn"><img class="contact-icon" src="https://cdn-icons-png.flaticon.com/512/724/724664.png" alt="" aria-hidden="true"> 090-326-641</a>
+          <a href="mailto:kie_zii@hotmail.co.th" class="cta-btn"><img class="contact-icon" src="https://cdn-icons-png.flaticon.com/512/9068/9068642.png" alt="" aria-hidden="true" loading="lazy" decoding="async"> kie_zii@hotmail.co.th</a>
+          <a href="https://line.me/ti/p/kie_zii" class="cta-btn line-btn" target="_blank" rel="noopener"><img class="contact-icon" src="https://cdn-icons-png.flaticon.com/512/3670/3670089.png" alt="" aria-hidden="true" loading="lazy" decoding="async"> <span data-i18n="lineLabel">แชท LINE</span> : kie_zii</a>
+          <a href="https://www.facebook.com/GieMystick/" class="cta-btn fb-btn" target="_blank" rel="noopener"><img class="contact-icon" src="https://cdn-icons-png.flaticon.com/512/5968/5968764.png" alt="" aria-hidden="true" loading="lazy" decoding="async"> FACEBOOK : Gie's Surakhan</a>
+          <a href="tel:090326641" class="cta-btn"><img class="contact-icon" src="https://cdn-icons-png.flaticon.com/512/724/724664.png" alt="" aria-hidden="true" loading="lazy" decoding="async"> 090-326-641</a>
 
         </p>
         <div class="contact-layout" data-aos="fade-up" data-aos-delay="300">
@@ -838,7 +848,7 @@
       <div class="footer-grid">
         <div class="footer-brand">
           <a class="footer-logo" href="./" aria-label="Portfolio / หน้าแรก">
-            <img src="images/portfolio-emblem.png" alt="ตราสัญลักษณ์ Portfolio ของวรเทพจักษ์ สุระขัน"/>
+            <img src="images/portfolio-emblem.png" alt="ตราสัญลักษณ์ Portfolio ของวรเทพจักษ์ สุระขัน" loading="lazy" decoding="async">
             <span>Portfolio</span>
           </a>
           <p data-i18n="footerDescription">ผลงานและประสบการณ์ด้านวิศวกรรมคอมพิวเตอร์ IT Support และงานระบบ</p>
